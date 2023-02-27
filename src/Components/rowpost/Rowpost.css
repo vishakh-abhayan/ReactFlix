@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inconsolata&family=Kanit:wght@300&family=Roboto+Slab:wght@300&display=swap");
+.postersRow {
+  margin: 20px;
+}
+.postersRow h2 {
+  font-family: "Kanit", sans-serif;
+  font-weight: 100;
+}
+
+.posters::-webkit-scrollbar {
+  display: none;
+}
+.posters {
+  display: flex;
+  overflow: scroll;
+}
+.posters img {
+  margin: 10px;
+  max-width: 450px;
+}
