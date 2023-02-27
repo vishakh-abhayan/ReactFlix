@@ -1,0 +1,46 @@
+.Header {
+  background-color: rgb(28, 36, 46);
+  max-width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  overflow: hidden;
+}
+.Image img {
+  width: 160px;
+  height: auto;
+  flex: 1;
+}
+/* Header Navigaters /Right section */
+
+.List {
+  flex: 2;
+}
+.List ul {
+  list-style: none;
+}
+.List ul li {
+  display: inline-block;
+}
+.List ul li a {
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  padding: 0 10px 0 40px;
+}
+/* Header intaract /Left-section  */
+.Info {
+  display: flex;
+  align-items: center;
+}
+.Avthar img {
+  height: 30px;
+  width: auto;
+  flex: 1;
+}
+.userId {
+  flex: 1;
+  margin: 10px;
+  font-family: "Poppins", sans-serif;
+}
