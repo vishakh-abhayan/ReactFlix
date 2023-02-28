@@ -13,7 +13,7 @@ function Banner() {
   }, []);
 
   return (
-    <div>
+    <div className="Container">
       <div
         style={{
           backgroundImage: `url(${

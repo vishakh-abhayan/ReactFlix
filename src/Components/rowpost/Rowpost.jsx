@@ -1,63 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Rowpost.css";
-function Rowpost() {
+import axios from "../../axios";
+import { imageUrl } from "../../Constants/Constant";
+function Rowpost(props) {
+  const [movie, setMovie] = useState([]);
+  useEffect(() => {
+    axios.get(props.url).then((response) => {
+      console.log(response.data);
+      setMovie(response.data.results);
+    });
+  }, []);
+
   return (
     <div>
       <div className="postersRow">
-        <h2>Most Popular</h2>
+        <h2>{props.title}</h2>
         <div className="posters">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI97-cE50f9k3OJbbFUqGC-gPZvIDMIo-baQ&usqp=CAU"
-            alt=""
-          />
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI97-cE50f9k3OJbbFUqGC-gPZvIDMIo-baQ&usqp=CAU"
-            alt=""
-          />
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI97-cE50f9k3OJbbFUqGC-gPZvIDMIo-baQ&usqp=CAU"
-            alt=""
-          />
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI97-cE50f9k3OJbbFUqGC-gPZvIDMIo-baQ&usqp=CAU"
-            alt=""
-          />
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI97-cE50f9k3OJbbFUqGC-gPZvIDMIo-baQ&usqp=CAU"
-            alt=""
-          />
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI97-cE50f9k3OJbbFUqGC-gPZvIDMIo-baQ&usqp=CAU"
-            alt=""
-          />
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI97-cE50f9k3OJbbFUqGC-gPZvIDMIo-baQ&usqp=CAU"
-            alt=""
-          />
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI97-cE50f9k3OJbbFUqGC-gPZvIDMIo-baQ&usqp=CAU"
-            alt=""
-          />
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI97-cE50f9k3OJbbFUqGC-gPZvIDMIo-baQ&usqp=CAU"
-            alt=""
-          />
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI97-cE50f9k3OJbbFUqGC-gPZvIDMIo-baQ&usqp=CAU"
-            alt=""
-          />
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI97-cE50f9k3OJbbFUqGC-gPZvIDMIo-baQ&usqp=CAU"
-            alt=""
-          />
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI97-cE50f9k3OJbbFUqGC-gPZvIDMIo-baQ&usqp=CAU"
-            alt=""
-          />
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI97-cE50f9k3OJbbFUqGC-gPZvIDMIo-baQ&usqp=CAU"
-            alt=""
-          />
+          {movie.map((obj) => {
+            return (
+              <img
+                className={props.isSmall ? "smPost" : "postImg"}
+                src={`${imageUrl + obj.backdrop_path}`}
+                alt=""
+              />
+            );
+          })}
         </div>
       </div>
     </div>

@@ -1,7 +1,11 @@
+.Container {
+  background-color: #fff;
+  /* margin-top: 70px; */
+}
 .backDrop {
-  background-size: cover;
-  height: 540px;
-  background-size: 100% 650px;
+  background-size: contain;
+  height: 630px;
+  background-size: 100%;
   display: grid;
   grid-template-rows: 2fr 1fr 1fr;
   grid-template-columns: 2fr 1fr 1fr;
@@ -43,7 +47,7 @@
   width: 75rem;
   line-height: 1.3;
   padding-top: 1rem;
-  font-size: 1.5rem;
+  font-size: 20px;
   height: 80px;
   max-width: 600px;
   font-family: "Raleway", sans-serif;

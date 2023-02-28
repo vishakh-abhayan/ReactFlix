@@ -14,7 +14,11 @@
   display: flex;
   overflow: scroll;
 }
-.posters img {
+.postImg {
   margin: 10px;
-  max-width: 450px;
+  max-height: 260px;
+}
+.smPost {
+  margin: 10px;
+  max-height: 200px;
 }
