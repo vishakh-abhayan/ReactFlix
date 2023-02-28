@@ -13,12 +13,22 @@
 .posters {
   display: flex;
   overflow: scroll;
+  height: 300px;
+  padding-top: 20px;
 }
 .postImg {
   margin: 10px;
-  max-height: 260px;
+  max-height: 280px;
 }
 .smPost {
   margin: 10px;
   max-height: 200px;
+}
+.smPost:hover {
+  transform: scale(1.1);
+  transition: transform 0.1s ease-in;
+}
+.postersSM {
+  display: flex;
+  overflow: scroll;
 }

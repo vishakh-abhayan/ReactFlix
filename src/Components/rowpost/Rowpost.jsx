@@ -15,12 +15,12 @@ function Rowpost(props) {
     <div>
       <div className="postersRow">
         <h2>{props.title}</h2>
-        <div className="posters">
+        <div className={props.isSmall ? "postersSM" : "posters"}>
           {movie.map((obj) => {
             return (
               <img
                 className={props.isSmall ? "smPost" : "postImg"}
-                src={`${imageUrl + obj.backdrop_path}`}
+                src={`${imageUrl + obj.poster_path}`}
                 alt=""
               />
             );
