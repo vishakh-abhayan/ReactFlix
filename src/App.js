@@ -9,6 +9,8 @@ function App() {
       <Header />
       <Banner />
       <Rowpost />
+      <Rowpost />
+      <Rowpost />
     </div>
   );
 }

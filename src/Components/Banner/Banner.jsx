@@ -1,19 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "../../axios";
+import { API_KEY, imageUrl } from "../../Constants/Constant";
 import "./Banner.css";
 function Banner() {
+  const [movie, setMovie] = useState([]);
+  useEffect(() => {
+    axios.get(`trending/movie/week?api_key=${API_KEY}`).then((response) => {
+      let x = Math.floor(Math.random() * 20);
+      console.log(response.data.results[x]);
+      setMovie(response.data.results[x]);
+    });
+  }, []);
+
   return (
     <div>
-      <div className="backDrop">
+      <div
+        style={{
+          backgroundImage: `url(${
+            movie ? imageUrl + movie.backdrop_path : ""
+          })`,
+        }}
+        className="backDrop"
+      >
         <div className="content">
-          <h1>MOVIE NAME</h1>
+          <h1>{movie ? movie.title : ""}</h1>
           <div className="banner_button">
             <button>Play</button>
             <button>My List</button>
           </div>
-          <h2>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-            maxime corrupti, soluta numquam inventore earum.
-          </h2>
+          <h2>{movie.overview}</h2>
         </div>
         <div className="Fade"></div>
       </div>

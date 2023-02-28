@@ -1,20 +1,20 @@
 .backDrop {
-  background: url("https://wallpapers.com/images/featured/69qiv32a2ee7t57l.jpg");
   background-size: cover;
-  height: 500px;
+  height: 540px;
   background-size: 100% 650px;
   display: grid;
   grid-template-rows: 2fr 1fr 1fr;
   grid-template-columns: 2fr 1fr 1fr;
   justify-content: center;
   align-items: center;
+  margin-bottom: 30px;
 }
 .content {
   grid-row-start: 1;
   grid-row-end: 4;
   grid-column-start: 1;
   grid-column-end: 3;
-  margin: auto 70px;
+  margin: auto 20px;
   padding: 30px;
 }
 .content h1 {
