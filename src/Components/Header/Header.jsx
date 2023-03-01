@@ -6,7 +6,7 @@ function Header() {
       <div className="Header">
         <div className="Image">
           <img
-            src="https://m.media-amazon.com/images/G/01/primevideo/seo/primevideo-seo-logo.png"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
             alt=""
           />
         </div>
