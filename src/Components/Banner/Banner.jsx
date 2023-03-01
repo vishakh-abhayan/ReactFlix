@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "../../axios";
-import { API_KEY, imageUrl } from "../../Constants/Constant";
+import { imageUrl } from "../../Constants/Constant";
 import "./Banner.css";
 
-function Banner() {
+function Banner(props) {
   const [movie, setMovie] = useState([]);
   useEffect(() => {
-    axios.get(`trending/movie/week?api_key=${API_KEY}`).then((response) => {
+    axios.get(props.url).then((response) => {
       let x = Math.floor(Math.random() * 20);
       console.log(response.data.results[x]);
       setMovie(response.data.results[x]);

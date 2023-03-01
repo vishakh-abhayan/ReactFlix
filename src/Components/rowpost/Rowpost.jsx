@@ -6,7 +6,6 @@ function Rowpost(props) {
   const [movie, setMovie] = useState([]);
   useEffect(() => {
     axios.get(props.url).then((response) => {
-      console.log(response.data);
       setMovie(response.data.results);
     });
   }, []);

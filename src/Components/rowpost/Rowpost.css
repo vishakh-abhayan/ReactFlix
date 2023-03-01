@@ -14,7 +14,7 @@
   display: flex;
   overflow: scroll;
   height: 300px;
-  padding-top: 20px;
+  padding-top: 5px;
 }
 .postImg {
   margin: 10px;
