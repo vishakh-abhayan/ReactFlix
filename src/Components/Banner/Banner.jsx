@@ -6,6 +6,11 @@ import "./Banner.css";
 function Banner(props) {
   const [movie, setMovie] = useState([]);
   useEffect(() => {
+    axios.get(props.url).then((response) => {
+      let x = Math.floor(Math.random() * 20);
+      console.log(response.data.results[x]);
+      setMovie(response.data.results[x]);
+    });
     setInterval(() => {
       axios.get(props.url).then((response) => {
         let x = Math.floor(Math.random() * 20);
