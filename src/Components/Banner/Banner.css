@@ -1,6 +1,7 @@
 .Container {
   background-color: #fff;
-  /* margin-top: 70px; */
+  /* transition: linear 2s 2s; */
+  margin-top: 50px;
 }
 .backDrop {
   background-size: contain;
